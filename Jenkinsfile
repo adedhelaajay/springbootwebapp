@@ -8,14 +8,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the pipeline'
-                //sh 'mvn -B -DskipTests clean package'
+                sh 'mvn -B -DskipTests clean package'
             }
         }
         stage('Test') {
             steps {
                 echo 'Building the pipeline'
-                sh 'echo "test succeded."'
-                //sh 'mvn test'
+                sh 'mvn test'
             }
         }
         stage('Deliver') {
