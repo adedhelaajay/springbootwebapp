@@ -4,19 +4,19 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the pipeline'
-                sh 'mvn -B -DskipTests clean package'
+                //sh 'mvn -B -DskipTests clean package'
             }
         }
         stage('Test') {
             steps {
                 echo 'Building the pipeline'
-                sh 'mvn test'
+                //sh 'mvn test'
             }
-            post {
+            /*post {
                 always {
                     junit 'target/surefire-reports/*.xml'
                 }
-            }
+            }*/
         }
         stage('Deliver') {
             steps {
