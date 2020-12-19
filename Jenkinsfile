@@ -10,7 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Building the pipeline'
-                //sh 'mvn test'
+                sh 'mvn test'
             }
             /*post {
                 always {
